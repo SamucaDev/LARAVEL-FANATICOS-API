@@ -143,3 +143,7 @@ Samuel Rodrigues
    [Linkedin]: <https://www.linkedin.com/in/samuelrodrigues18>
    [GitHub]: <https://github.com/DevSamuelRodrigues>
    [modelo]: <https://drawsql.app/fabapp/diagrams/teste>
+   [COMPOSER] <https://getcomposer.org/>
+   [PHP] <https://www.wampserver.com/en/>
+   [MYSQL] <https://www.wampserver.com/en/>
+   [APACHE] <https://www.wampserver.com/en/>

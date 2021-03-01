@@ -13,10 +13,10 @@ Front-end do projeto desenolvido em Ionic + Angular. [Repositorio Front](https:/
 - Manipulação de dados para a criação do carrinho de compras.
 
 ## Requisitos
-- [PHP] >= 7.0
+- [PHP] >= 7.2
 - [COMPOSER] >= 1.10
 - [APACHE] >= 2.0
-- [MYSQL] >= 8.0 ~ Sem suporte para MariaDB
+- [MYSQL] >= 5.7 ~ Sem suporte para MariaDB
 
 ## Tecnologias
 

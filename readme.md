@@ -38,7 +38,7 @@ composer update
 
 Em seguida crie um banco de dados [MySql] com o nome 'app_fanaticos', pref: 'utf8_general_ci'.
 
-Em seguida crie o arquivo '.env' na raiz do projeto, copiando o conteúdo do arquivo '.env.exemple', _modificando os parametros caso necessite_.
+Em seguida crie o arquivo '.env' na raiz do projeto, copiando o conteúdo do arquivo '.env.exemple', **modificando os parametros caso necessite**.
 Exemplo: Dados de entrada e porta do banco de dados.
 
 No projeto execute a seguinte linha de comando: 

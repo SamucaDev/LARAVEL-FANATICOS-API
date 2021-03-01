@@ -11,6 +11,11 @@ Front-end do projeto desenolvido em Ionic + Angular. [Repositorio Front](https:/
 - Seed desenvolvido para simular registros de produtos.
 - Envio de email para quando um usuário abandona o carrinho.
 
+## Requisitos
+- [PHP] >= 7.0
+- [COMPOSER] >= 1.10
+- [APACHE] >= 2.0
+- [MYSQL] >= 8.0 ~ Sem suporte para MariaDB
 
 ## Tecnologias
 

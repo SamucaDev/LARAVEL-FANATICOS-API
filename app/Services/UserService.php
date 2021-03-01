@@ -21,19 +21,28 @@ class UserService
 
     public function create($infoUser)
     {
+        $check =  $this->userRepository->find(function ($where) use ($infoUser) {
+            return $where->where('email', $infoUser->email);
+        });
+
+        if ($check != null) {
+            return false;
+        }
+
 
         $passwordUser = Hash::make($infoUser->password);
 
         // dd($passwordUser);
         $register =  $this->userRepository->create([
             'name'     => $infoUser->name,
-            'password' => 'teste',
+            'password' => $passwordUser,
             'email'    => $infoUser->email,
         ]);
 
 
         return [
             'userid' =>  $register->id,
+            'name'   =>  $register->name
         ];
     }
 

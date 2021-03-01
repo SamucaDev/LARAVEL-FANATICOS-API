@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User as UserBase;
 
-class TableOrder extends Model 
+class TableCartNotification extends Model 
 {
     /**
      * The attributes that are mass assignable.
@@ -12,5 +13,5 @@ class TableOrder extends Model
      * @var array
      */
     protected $guarded = [];
-    protected $table = 'order';
+    protected $table = 'cart_notification';
 }

@@ -25,7 +25,7 @@ class Cors
 
         if ($request->isMethod('OPTIONS'))
         {
-            return response()->json(['error' => false, 'message' => 'Method OPTIONS is allowed'], 200, $headers);
+            return response()->json(['success' => true, 'message' => 'Method OPTIONS is allowed'], 200, $headers);
         }
 
         $response = $next($request);

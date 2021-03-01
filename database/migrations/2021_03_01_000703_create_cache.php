@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableUserToken extends Migration
+class CreateCache extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateTableUserToken extends Migration
      */
     public function up()
     {
-        Schema::create('user_token', function (Blueprint $table) {
+        Schema::create('cache', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('token');
-            $table->bigInteger('userid')->unsigned();
-            $table->foreign('userid')->references('id')->on('user');
-            $table->timestamps();
+            $table->string('key');
+            $table->text('value');
+            $table->integer('expiration');
         });
     }
 
@@ -29,6 +28,6 @@ class CreateTableUserToken extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_token');
+        Schema::dropIfExists('cache');
     }
 }

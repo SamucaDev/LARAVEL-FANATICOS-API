@@ -108,14 +108,14 @@ class CartService
             return $where->where('cartid', $get->id);
         });
 
-        
-        $product = $this->productRepository->get(function ($where) use ($items){
-            return $where->whereIn('id', $items->map(function ($item){
+
+        $product = $this->productRepository->get(function ($where) use ($items) {
+            return $where->whereIn('id', $items->map(function ($item) {
                 return $item->productid;
             }));
         });
 
-        $productForm = $items->map(function ($value) use ($product){
+        $productForm = $items->map(function ($value) use ($product) {
             $_infoProd = $product->where('id', $value->productid)->values()[0];
             // dd($value);
 
@@ -128,10 +128,9 @@ class CartService
                 'desc'       => $_infoProd->desc,
                 'pathImg'    => $_infoProd->pathImg
 
-            ];   
+            ];
 
             return $array;
-
         });
 
 
@@ -145,26 +144,30 @@ class CartService
         ];
 
         return $finalArrayItemsCart;
-
-
     }
 
     public function clearItems($request)
     {
-        $this->cartItemRepository->delete(function($where) use ($request){
+        $this->cartItemRepository->delete(function ($where) use ($request) {
             return $where->where('cartid', $request->cartid);
         });
 
-      // tratativa de erro request
-      
-      $this->cartRepository->delete(function($where) use ($request){
-        return $where->where('id', $request->cartid);
-    });
+        // tratativa de erro request
 
-     //Tratativa de erro 
+        $this->cartRepository->delete(function ($where) use ($request) {
+            return $where->where('id', $request->cartid);
+        });
 
-     return true;
-      
+        //Tratativa de erro 
 
+        return true;
+    }
+
+    public function getAbandonedCart()
+    {
+        return $this->cartRepository->get(function ($builder) {
+            return $builder->where('dateExpiration', '<=', date('Y-m-d h:m:s'))->where('status', 0);
+        });
+        
     }
 }

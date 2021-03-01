@@ -33,10 +33,14 @@ class Authenticate
      * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next)
     {
-        if ($this->auth->guard($guard)->guest()) {
-            return response('Unauthorized.', 401);
+        if ($this->auth->guard('api')->guest()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unauthorized access',
+                'invalid_access_token' => true
+            ], 401);
         }
 
         return $next($request);

@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-use App\User as UserBase;
 
-class TableGroupProduct extends UserBase
+class TableGroupProduct extends Model 
 {
     /**
      * The attributes that are mass assignable.

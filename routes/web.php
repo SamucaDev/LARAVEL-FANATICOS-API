@@ -17,10 +17,18 @@ $router->get('/', function () use ($router) {
 });
 
 
+
 $router->group(['prefix' => "/user"], function () use ($router) {
-    $router->post('/register', 'UserController@create');
-    $router->post('/login', 'UserController@login');
+
+    $router->post('/login', 'AuthController@login');
+    $router->post('/register', 'AuthController@create');
+
+    $router->group(['middleware' => 'auth'], function () use ($router) {
+        $router->post('/refresh', 'AuthController@refresh');
+    });
 });
+
+
 
 $router->group(['prefix' => "/product"], function () use ($router) {
     $router->post('/getfirst', 'ProductController@getFisrt');
@@ -28,9 +36,8 @@ $router->group(['prefix' => "/product"], function () use ($router) {
     $router->post('/find', 'ProductController@getfind');
 });
 
-$router->group(['prefix' => "/cart"], function () use ($router) {
+$router->group(['prefix' => "/cart", 'middleware' => 'auth'], function () use ($router) {
     $router->post('/add', 'CartController@addItem');
     $router->post('/getItem', 'CartController@getItem');
     $router->post('/clear', 'CartController@clear');
 });
-

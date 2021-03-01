@@ -9,7 +9,8 @@ Front-end do projeto desenolvido em Ionic + Angular. [Repositorio Front](https:/
 - Utilização do método de autenticação JWT. 
 - Migrações para cadastrar as tabelas da plataforma.
 - Seed desenvolvido para simular registros de produtos.
-- Envio de email para quando um usuário abandona o carrinho.
+- Script de envio de email para quando um usuário abandona o carrinho.
+- Manipulação de dados para a criação do carrinho de compras.
 
 ## Requisitos
 - [PHP] >= 7.0

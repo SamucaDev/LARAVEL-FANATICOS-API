@@ -68,6 +68,12 @@ Execute este comando para gerar a chave de autenticação do JWT:
 php artisan jwt:secret
 ```
 
+Execute este comando para iniciar o servidor php local:
+
+```sh
+php -S localhost:1533 -t public
+```
+
 ## Script de carrinho abandonado
 
 Para desenvolver este script utilizei um dos recursos do Framework Laravel, Commands, que possibilita a criação de comandos agendáveis. 

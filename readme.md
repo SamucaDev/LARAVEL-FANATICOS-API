@@ -22,7 +22,7 @@ Front-end do projeto desenolvido em Ionic + Angular. [Repositorio Front](https:/
 Para desenvolver este projeto utilizei as seguintes tecnologias:
 
 - [Laravel] - Utilizado para desenvolver todas as vertentes do backend da aplicação.
-- [MySql] - Utilizado para armazenar todos os dados da aplicação.
+- [MYSQL] - Utilizado para armazenar todos os dados da aplicação.
 
 
 ## Instalação
@@ -121,14 +121,6 @@ Dentre as características realço as seguintes:
 - Agilidade: Contamos com diversas funções pré-feitas e totalmente editáveis, ou seja, resolvendo rapidamentes problemas e necessidades comuns e tendo total controle do que esta acontecendo em determinado script.
 
 
-
-
-
-
-
-
-
-
 ## Licença
 Desenvolvedor FullStack
 Samuel Rodrigues
@@ -143,7 +135,8 @@ Samuel Rodrigues
    [Linkedin]: <https://www.linkedin.com/in/samuelrodrigues18>
    [GitHub]: <https://github.com/DevSamuelRodrigues>
    [modelo]: <https://drawsql.app/fabapp/diagrams/teste>
-   [COMPOSER] <https://getcomposer.org/>
-   [PHP] <https://www.wampserver.com/en/>
-   [MYSQL] <https://www.wampserver.com/en/>
-   [APACHE] <https://www.wampserver.com/en/>
+   [COMPOSER]: <https://getcomposer.org/>
+   [PHP]: <https://www.wampserver.com/en/>
+   [MYSQL]: <https://www.wampserver.com/en/>
+   [APACHE]: <https://www.wampserver.com/en/>
+   [Laravel]: <http://localhost:8100/page-menu>

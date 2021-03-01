@@ -99,7 +99,7 @@ php artisan AbandonedCartCommand:Execute
 ```
 PS: Posteriormente este comando será programado em um servidor para ser executado em um intervalo de tempo.
 
-##Template Email
+## Template Email
 
 ![N|Solid](https://i.imgur.com/FxCfTLQ.png)
 
